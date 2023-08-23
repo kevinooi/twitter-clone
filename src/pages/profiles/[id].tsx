@@ -43,8 +43,7 @@ const ProfilePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
 
   if (isLoading) return <LoadingSpinner />;
 
-  if (profile == null || profile.name == null)
-    return <ErrorPage statusCode={404} />;
+  if (profile?.name == null) return <ErrorPage statusCode={404} />;
 
   return (
     <>
